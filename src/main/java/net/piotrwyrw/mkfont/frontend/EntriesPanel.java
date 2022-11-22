@@ -22,10 +22,14 @@ public class EntriesPanel extends JPanel {
 
     public void addEntry(LetterData data) {
         JPanel p = new JPanel();
-        p.setBackground(ColorPalette.EP_BACKGROUND);
+
+        Color c = ColorPalette.EP_POSSIBLE_BACKGROUNDS[(int) (Math.random() * ColorPalette.EP_POSSIBLE_BACKGROUNDS.length)];
+
+        p.setBackground(c);
         p.setLayout(new FlowLayout());
 
         JLabel label = new JLabel(data.getDesignation());
+        label.setForeground(ColorPalette.EP_FOREGROUND);
         label.setFont(new Font("Arial", Font.PLAIN, 30));
         p.add(label);
         p.setMinimumSize(new Dimension(100, 150));

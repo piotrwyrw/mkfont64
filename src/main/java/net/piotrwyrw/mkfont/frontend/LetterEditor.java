@@ -50,7 +50,9 @@ public class LetterEditor extends JFrame {
         if (designation.isEmpty())
             dispose();
 
-        setTitle(getTitle() + " ~ *\"L_" + designation + "\"");
+        designation = "L_" + designation;
+
+        setTitle(getTitle() + "\"" + designation + "\"");
     }
 
     private void saveAndExit() {
